@@ -1,0 +1,41 @@
+CODE ADDITION AND MULTIPLICATION OF TWOSEQUENCES:
+clc;
+clear;
+close all;
+N = 30;
+n = 0:N-1;
+% Sequence 1: Sinusoidal
+x1 = 2*sin(2*pi*0.05*n);
+% Sequence 2: Exponential decay
+x2 = 3*exp(-0.1*n);
+% Addition and multiplication
+x_add = x1 + x2;
+x_mult = x1 .* x2;
+% Plot in 2x2 layout
+figure;
+subplot(2,2,1);
+stem(n,x1,'filled');
+grid on;
+title('Sinusoidal Sequence');
+xlabel('n');
+ylabel('Amplitude');
+subplot(2,2,2);
+stem(n,x2,'filled');
+grid on;
+title('Exponential Sequence');
+xlabel('n');
+ylabel('Amplitude');
+
+subplot(2,2,3);
+stem(n,x_add,'filled');
+grid on;
+title('Addition of Sequences');
+xlabel('n');
+ylabel('Amplitude');
+
+subplot(2,2,4);
+stem(n,x_mult,'filled');
+grid on;
+title('Multiplication of Sequences');
+xlabel('n');
+ylabel('Amplitude');
